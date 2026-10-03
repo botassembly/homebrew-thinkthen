@@ -1,23 +1,23 @@
 class Thinkthen < Formula
   desc "Semantic judgments over text"
   homepage "https://thinkthen.dev"
-  version "0.1.0"
+  version "0.1.1"
   license "MIT"
 
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/botassembly/thinkthen/releases/download/v0.1.0/thinkthen-0.1.0-aarch64-apple-darwin.tar.gz"
-      sha256 "28acd50d9540838b6aec64646df40a7c9f8cd5383284e5c33e8082432f95e413"
+      url "https://github.com/botassembly/thinkthen/releases/download/v0.1.1/thinkthen-0.1.1-aarch64-apple-darwin.tar.gz"
+      sha256 "b064a172bee841525b7c16f06517b31216f1466f1c68933ccac101b0a1103381"
     else
-      url "https://github.com/botassembly/thinkthen/releases/download/v0.1.0/thinkthen-0.1.0-x86_64-apple-darwin.tar.gz"
-      sha256 "b2b2ab7d32d698f8f394235ec58a8d91e867ed2df3dd8d53cc6975f8d64aa073"
+      url "https://github.com/botassembly/thinkthen/releases/download/v0.1.1/thinkthen-0.1.1-x86_64-apple-darwin.tar.gz"
+      sha256 "f25ba4cc08a6bdd868a7b70e26905f7ccd108c29a076e7e6a7f6b9fb7294f6d1"
     end
   elsif Hardware::CPU.arm?
-    url "https://github.com/botassembly/thinkthen/releases/download/v0.1.0/thinkthen-0.1.0-aarch64-unknown-linux-musl.tar.gz"
-    sha256 "d9bf77456ed2c7a6ee5bd51fdd1422de2643322c6774f910e70f90d83d7c512b"
+    url "https://github.com/botassembly/thinkthen/releases/download/v0.1.1/thinkthen-0.1.1-aarch64-unknown-linux-musl.tar.gz"
+    sha256 "1bfd857a0abbd86c66584eaf0a3189f7aa47f45a353106923d0a9bf577b78285"
   else
-    url "https://github.com/botassembly/thinkthen/releases/download/v0.1.0/thinkthen-0.1.0-x86_64-unknown-linux-musl.tar.gz"
-    sha256 "a4f726ce863588a7c60e4348dc6e3ef0b80bcb99d55159d7efd24ce80dbfe897"
+    url "https://github.com/botassembly/thinkthen/releases/download/v0.1.1/thinkthen-0.1.1-x86_64-unknown-linux-musl.tar.gz"
+    sha256 "cf587b7e0278d318f1a6306456109302b214c3b0cd9ba65b3169605353006dba"
   end
 
   def install
@@ -25,6 +25,6 @@ class Thinkthen < Formula
   end
 
   test do
-    assert_match "thinkthen 0.1.0", shell_output("#{bin}/thinkthen --version")
+    assert_match "thinkthen 0.1.1", shell_output("#{bin}/thinkthen --version")
   end
 end
